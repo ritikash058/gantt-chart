@@ -55,8 +55,8 @@ interface Task {
   actualEndDate: string;     // ISO date string (e.g., "2025-01-07T23:59:59") or empty string for ongoing tasks
 }
 
-<p align="left">
-  <a href='./src/public/image.png'>
-    <img width="48%" src="./src/public/image.png" alt="Gantt Chart Demo" />
-  </a>
-</p>
+## Screen Capture
+
+![Gantt Chart Demo](./src/public/image.png)
+
+> Note: The screenshot shows the Gantt chart in action with sample data. You can customize the styling and data according to your needs.

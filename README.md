@@ -54,7 +54,6 @@ interface Task {
   actualStartDate: string;   // ISO date string (e.g., "2025-01-01T00:00:00")
   actualEndDate: string;     // ISO date string (e.g., "2025-01-07T23:59:59") or empty string for ongoing tasks
 }
-typescript
 ```
 
 ## Screen Capture

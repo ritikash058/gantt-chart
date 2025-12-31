@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## This is a Gantt chart visualization built with React and TypeScript.
+
+## Features
+- Interactive timeline visualization
+- Planned vs actual task tracking
+- Responsive design
+- TypeScript type safety
+- Sample data integration
+- Easy to customize and extend
+- Modular component architecture
+- Ready to use with sample data
+- Clean and maintainable code structure
+- Well-documented code
+- TypeScript type safety
+- Ready for production use
+- Easy to integrate with your own data
+- Follows modern React best practices
 
 ## Getting Started
 
@@ -16,21 +32,31 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To use this Gantt chart in your own project:
 
-## Learn More
+1. Copy the `src/components/Chart.tsx` file to your project
+2. Update the `Task` type in `src/components/Chart.tsx` to match your data structure
+3. Import and use the `Gantt` component in your pages
+4. Provide your own task data in the required format
 
-To learn more about Next.js, take a look at the following resources:
+## Task Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The component expects tasks with the following structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+interface Task {
+  id: number | string;
+  name: string;
+  plannedStartDate: string;  // ISO date string (e.g., "2025-01-01T00:00:00")
+  plannedEndDate: string;    // ISO date string (e.g., "2025-01-05T23:59:59")
+  actualStartDate: string;   // ISO date string (e.g., "2025-01-01T00:00:00")
+  actualEndDate: string;     // ISO date string (e.g., "2025-01-07T23:59:59") or empty string for ongoing tasks
+}
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="left">
+  <a href='./src/public/image.png'>
+    <img width="48%" src="./src/public/image.png" alt="Gantt Chart Demo" />
+  </a>
+</p>
